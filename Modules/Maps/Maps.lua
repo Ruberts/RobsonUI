@@ -1,10 +1,8 @@
 ﻿local T, C, L = Tukui:unpack()
 
-local _G = _G
 local Maps = T.Maps
 local Minimap = T.Maps.Minimap
 local Panels = T.Panels
-local Noop = function() end
 
 local function StyleMinimap(self)
 	local Mail = MiniMapMailFrame
@@ -37,17 +35,6 @@ local function PositionMinimap(self)
 	self:Point("TOPRIGHT", UIParent, "TOPRIGHT", -10, -29)
 end
 hooksecurefunc(Minimap, "PositionMinimap", PositionMinimap)
-
--- local GarrisonIcon = _G["GarrisonLandingPageMinimapButton"]
--- GarrisonIcon:Show()
-
--- local function EnableMinimapElements(self)
-	-- local frame = _G["GarrisonLandingPageMinimapButton"]
-	-- frame:Show()
-
--- end
--- hooksecurefunc(Minimap, "DisableMinimapElements", EnableMinimapElements)
-
 
 local function AddMinimapDataTexts(self)
 	local MinimapDataTextOne = Panels.MinimapDataTextOne

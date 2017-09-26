@@ -46,7 +46,6 @@ local function CreateAltPowerBar(self)
 	self:SetFrameStrata(AltPowerBarPanel:GetFrameStrata())
 	self:SetFrameLevel(AltPowerBarPanel:GetFrameLevel() + 10)
 	
-	--self.Status:SetStatusBarTexture(
 	self.Status:SetInside(AltPowerBarPanel)
 	self.Status:RobSkin()
 	self.Status:CreateShadow()

@@ -16,7 +16,6 @@ hooksecurefunc(Tooltip, "CreateAnchor", CreateAnchor)
 local function Skin(self)
 
 	self:RobSkin()
-	--self:CreateShadow()
 
 end
 hooksecurefunc(Tooltip, "Skin", Skin)

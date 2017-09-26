@@ -1,9 +1,5 @@
 ﻿local T, C, L = Tukui:unpack()
 
-------------------------------------------------------------------------
--- In my auras edit, I want to move buffs header at top right of the screen
-------------------------------------------------------------------------
-
 local Auras = T["Auras"]
 
 local function Skin(self)
