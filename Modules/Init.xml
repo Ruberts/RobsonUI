@@ -1,0 +1,58 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<!-- Fonts -->
+	<Script file="Fonts\Fonts.lua"/>
+
+	<!-- Panels -->
+	<Script file="Panels\Panels.lua"/>
+
+	<!-- Inventory -->
+	<Script file="Inventory\Inventory.lua"/>
+
+	<!-- Action Bars -->
+	<Script file="ActionBars\ActionBars.lua"/>
+
+	<!-- Cooldowns -->
+	<Script file="Cooldowns\Cooldowns.lua"/>
+
+	<!-- Auras -->
+	<Script file="Auras\Auras.lua"/>
+
+	<!-- Maps -->
+	<Script file="Maps\Maps.lua"/>
+
+	<!-- Data Text -->
+	<Script file="DataTexts\Core.lua"/>
+
+	<!-- ChatFrames -->
+	<Script file="ChatFrames\ChatFrames.lua"/>
+
+	<!-- UnitFrames -->
+	<Script file="UnitFrames\Core.lua"/>
+	<Script file="UnitFrames\Units\Player.lua"/>
+	<Script file="UnitFrames\Units\Target.lua"/>
+	<Script file="UnitFrames\Units\TargetOfTarget.lua"/>
+	<Script file="UnitFrames\Units\Pet.lua"/>
+	<Script file="UnitFrames\Units\Focus.lua"/>
+	<Script file="UnitFrames\Units\FocusTarget.lua"/>
+	<Script file="UnitFrames\Units\Arena.lua"/>
+	<Script file="UnitFrames\Units\Boss.lua"/>
+	<Script file="UnitFrames\Groups\Party.lua"/>
+	<Script file="UnitFrames\Groups\Raid.lua"/>
+
+	<!-- Tooltips -->
+	<Script file="Tooltips\Tooltips.lua"/>
+
+	<!-- NamePlates -->
+	<Script file="Nameplates\Nameplates.lua"/>
+
+	<!-- Misc. -->
+	<Script file="Miscellaneous\Miscellaneous.lua"/>
+	
+	<!-- Skins -->
+	<Script file="Skins\Skada.lua"/>
+	<Script file="Skins\WeakAuras.lua"/>
+	<Script file="Skin\DBM.lua"/>
+	
+	<!-- Pet Battles -->
+	<Script file="PetBattles\PetBattles.lua"/>
+</Ui>
