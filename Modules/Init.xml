@@ -51,7 +51,7 @@
 	<!-- Skins -->
 	<Script file="Skins\Skada.lua"/>
 	<Script file="Skins\WeakAuras.lua"/>
-	<Script file="Skin\DBM.lua"/>
+	<Script file="Skins\BigWigs.lua"/>
 	
 	<!-- Pet Battles -->
 	<Script file="PetBattles\PetBattles.lua"/>
