@@ -10,7 +10,6 @@ local buttonsize = 20
 
 local function CreateBG()
 	local BG = CreateFrame("Frame")
-	--BG:SetTemplate("Transparent")
 	BG:RobSkin()
 	
 	return BG
