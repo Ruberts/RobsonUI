@@ -6,7 +6,8 @@ local Noop = function() return end
 if not IsAddOnLoaded("BigWigs") then return end
 
 local FreeBackgrounds = {}
-local buttonsize = 20
+local buttonsize = 24
+local Popups = T["Popups"]
 
 local function CreateBG()
 	local BG = CreateFrame("Frame")
@@ -78,6 +79,7 @@ local function ApplyStyle(bar)
 	bg:ClearAllPoints()
 	bg:SetAllPoints(bar)
 	bg:RobSkin()
+	bg:CreateShadow()
 	bg:Show()
 	bar:Set("bigwigs:RobsonUI:bg", bg)
 
@@ -95,6 +97,7 @@ local function ApplyStyle(bar)
 		ibg:SetAllPoints(bar.candyBarIconFrame)
 		ibg:SetBackdropColor(0, 0, 0, 0)
 		ibg:Show()
+		ibg:CreateShadow()
 		bar:Set("bigwigs:RobsonUI:ibg", ibg)
 	end
 
@@ -126,25 +129,27 @@ local function ApplyStyle(bar)
 	bar.candyBarLabel:ClearAllPoints()
 	bar.candyBarLabel:SetPoint("LEFT", bar, "LEFT", 2, 0)
 	bar.candyBarLabel:SetPoint("RIGHT", bar, "RIGHT", -2, 0)
+	bar.candyBarLabel:SetFont("Interface\\AddOns\\RobsonUI\\Core\\Fonts\\ExpresswayRg.ttf", 12, "THINOUTLINE")
 
 	bar.candyBarDuration:ClearAllPoints()
 	bar.candyBarDuration:SetPoint("LEFT", bar, "LEFT", 2, 0)
 	bar.candyBarDuration:SetPoint("RIGHT", bar, "RIGHT", -2, 0)
+	bar.candyBarDuration:SetFont("Interface\\AddOns\\RobsonUI\\Core\\Fonts\\ExpresswayRg.ttf", 12, "THINOUTLINE")
 end
 
 local f = CreateFrame("Frame")
 local function RegisterStyle()
 	if not BigWigs then return end
-	local styleName = "RobsonUI"
-	local bars = BigWigs:GetPlugin("Bars", true)
+		local styleName = "RobsonUI"
+		local bars = BigWigs:GetPlugin("Bars", true)
 	if not bars then return end
-	bars:RegisterBarStyle(styleName, {
-		apiVersion = 1,
-		version = 1,
-		GetSpacing = function() return 18 end,
-		ApplyStyle = ApplyStyle,
-		BarStopped = FreeStyle,
-		GetStyleName = function() return styleName end,
+		bars:RegisterBarStyle(styleName, {
+			apiVersion = 1,
+			version = 1,
+			GetSpacing = function() return 4 end,
+			ApplyStyle = ApplyStyle,
+			BarStopped = FreeStyle,
+			GetStyleName = function() return styleName end,
 	})
 	bars.defaultDB.barStyle = styleName
 end
@@ -155,10 +160,126 @@ local reason = nil
 f:SetScript("OnEvent", function(self, event, msg)
 	if event == "ADDON_LOADED" then
 		if not reason then reason = (select(6, GetAddOnInfo("BigWigs_Plugins"))) end
-		if (reason == "MISSING" and msg == "BigWigs") or msg == "BigWigs_Plugins" then
-			RegisterStyle()
+			if (reason == "MISSING" and msg == "BigWigs") or msg == "BigWigs_Plugins" then
+				RegisterStyle()
 		end
 	elseif event == "PLAYER_LOGIN" then
 		RegisterStyle()
 	end
 end)
+
+function SetBigWigsProfile(layout)
+		BigWigs3DB = {
+			["namespaces"] = {
+				["BigWigs_Plugins_Victory"] = {},
+				["BigWigs_Plugins_Colors"] = {},
+				["BigWigs_Plugins_Alt Power"] = {
+					["profiles"] = {
+						["RobsonUI"] = {
+							["posx"] = 335.58,
+							["fontSize"] = 12,
+							["fontOutline"] = "THINOUTLINE",
+							["font"] = "ExpresswayRg",
+							["lock"] = true,
+							["posy"] = 74,
+						},
+					},
+				},
+				["BigWigs_Plugins_BossBlock"] = {},
+				["BigWigs_Plugins_Bars"] = {
+					["profiles"] = {
+						["RobsonUI"] = {
+							["BigWigsEmphasizeAnchor_y"] = 274.777784431353,
+							["fontSize"] = 12,
+							["BigWigsAnchor_width"] = 390,
+							["BigWigsAnchor_y"] = 265.177697393337,
+							["BigWigsEmphasizeAnchor_x"] = 251.977762177876,
+							["barStyle"] = "RobsonUI",
+							["emphasizeGrowup"] = true,
+							["BigWigsAnchor_x"] = 1018.51096216262,
+							["outline"] = "THINOUTLINE",
+							["BigWigsEmphasizeAnchor_width"] = 390,
+							["font"] = "Expressway",
+							["emphasizeScale"] = 1.0,
+							["texture"] = "Skullflower",
+						},
+					},
+				},
+				["BigWigs_Plugins_Super Emphasize"] = {
+					["profiles"] = {
+						["RobsonUI"] = {
+							["font"] = "ExpresswayRg",
+						},
+					},
+				},
+				["BigWigs_Plugins_Sounds"] = {},
+				["BigWigs_Plugins_Messages"] = {
+					["profiles"] = {
+						["RobsonUI"] = {
+							["outline"] = "OUTLINE",
+							["fontSize"] = 20,
+							["BWEmphasizeCountdownMessageAnchor_x"] = 664,
+							["BWMessageAnchor_x"] = 608,
+							["growUpwards"] = false,
+							["BWEmphasizeCountdownMessageAnchor_y"] = 523,
+							["font"] = "ExpresswayRg",
+							["BWEmphasizeMessageAnchor_y"] = 614,
+							["BWMessageAnchor_y"] = 676,
+							["BWEmphasizeMessageAnchor_x"] = 610,
+						},
+					},
+				},
+				["BigWigs_Plugins_Statistics"] = {},
+				["BigWigs_Plugins_Respawn"] = {},
+				["BigWigs_Plugins_Proximity"] = {
+					["profiles"] = {
+						["RobsonUI"] = {
+							["posx"] = 886.58,
+							["font"] = "ExpresswayRg",
+							["lock"] = true,
+							["height"] = 99.0000381469727,
+							["posy"] = 88.22,
+						},
+					},
+				},
+				["BigWigs_Plugins_Raid Icons"] = {},
+				["LibDualSpec-1.0"] = {},
+			},
+			["profiles"] = {
+				["RobsonUI"] = {
+					["fakeDBMVersion"] = true,
+				},
+			},
+		}
+end
+
+
+local pr = function(msg)
+	print("|cff1784d1RobsonUI BigWigs Skin|r:", tostring(msg))
+end
+
+SLASH_ROBSONUIBW1 = "/rbw"
+SlashCmdList["ROBSONUIBW"] = function(msg)
+	if msg == "apply" then
+		Popups.ShowPopup("ROBSONUI_ENABLE_BW_SKIN")
+	else
+		pr("use |cff1784d1/rbw apply|r to apply BigWigs settings.")
+		--pr("use |cff1784d1/rbw test|r to launch DBM testmode.")
+		--pr("use |cff1784d1/rbw bh|r to show test BossHealth frame.")
+	end
+end
+
+Popups.Popup["ROBSONUI_ENABLE_BW_SKIN"] = {
+	Question = "Enable the BigWigs skin",
+	Answer1 = ACCEPT,
+	Answer2 = CANCEL,
+	Function1 = function(self)
+		SetBigWigsProfile()
+		if InCombatLockdown() then
+			print(ERR_NOT_IN_COMBAT)
+			print("Please reload your interface to apply BigWigs skin.")
+		else
+			ReloadUI()
+		end
+	end,
+}
