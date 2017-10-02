@@ -176,12 +176,12 @@ function SetBigWigsProfile(layout)
 				["BigWigs_Plugins_Alt Power"] = {
 					["profiles"] = {
 						["RobsonUI"] = {
-							["posx"] = 335.58,
+							["posx"] = 256,
 							["fontSize"] = 12,
 							["fontOutline"] = "THINOUTLINE",
 							["font"] = "ExpresswayRg",
 							["lock"] = true,
-							["posy"] = 74,
+							["posy"] = 380,
 						},
 					},
 				},
@@ -189,18 +189,19 @@ function SetBigWigsProfile(layout)
 				["BigWigs_Plugins_Bars"] = {
 					["profiles"] = {
 						["RobsonUI"] = {
-							["BigWigsEmphasizeAnchor_y"] = 274.777784431353,
+							["BigWigsEmphasizeAnchor_y"] = 596,
 							["fontSize"] = 12,
-							["BigWigsAnchor_width"] = 390,
-							["BigWigsAnchor_y"] = 265.177697393337,
-							["BigWigsEmphasizeAnchor_x"] = 251.977762177876,
+							["BigWigsAnchor_width"] = 362,
+							["BigWigsAnchor_y"] = 90,
+							["BigWigsEmphasizeAnchor_x"] = 590,
 							["barStyle"] = "RobsonUI",
 							["emphasizeGrowup"] = true,
-							["BigWigsAnchor_x"] = 1018.51096216262,
+							["BigWigsAnchor_x"] = 1167,
 							["outline"] = "THINOUTLINE",
-							["BigWigsEmphasizeAnchor_width"] = 390,
+							["BigWigsEmphasizeAnchor_width"] = 362,
 							["font"] = "Expressway",
 							["emphasizeScale"] = 1.0,
+							["emphasizeMove"] = false,
 							["texture"] = "Skullflower",
 						},
 					},
@@ -212,20 +213,29 @@ function SetBigWigsProfile(layout)
 						},
 					},
 				},
-				["BigWigs_Plugins_Sounds"] = {},
+				["BigWigs_Plugins_Sounds"] = {
+				},
+				["BigWigs_Plugins_InfoBox"] = {
+					["profiles"] = {
+						["RobsonUI"] = {
+							["posx"] = 256,
+							["posy"] = 318,
+						},
+					},
+				},
 				["BigWigs_Plugins_Messages"] = {
 					["profiles"] = {
 						["RobsonUI"] = {
 							["outline"] = "OUTLINE",
-							["fontSize"] = 20,
-							["BWEmphasizeCountdownMessageAnchor_x"] = 664,
-							["BWMessageAnchor_x"] = 608,
-							["growUpwards"] = false,
-							["BWEmphasizeCountdownMessageAnchor_y"] = 523,
+							["BWEmphasizeMessageAnchor_x"] = 628.13343119721,
+							["BWEmphasizeCountdownMessageAnchor_x"] = 669.866701602936,
+							["BWEmphasizeMessageAnchor_y"] = 688.133369222283,
+							["BWMessageAnchor_y"] = 645.599968566494,
+							["BWMessageAnchor_x"] = 628.266634329157,
+							["BWEmphasizeCountdownMessageAnchor_y"] = 505.400026358664,
 							["font"] = "ExpresswayRg",
-							["BWEmphasizeMessageAnchor_y"] = 614,
-							["BWMessageAnchor_y"] = 676,
-							["BWEmphasizeMessageAnchor_x"] = 610,
+							["fontSize"] = 20,
+							["growUpwards"] = false,
 						},
 					},
 				},
@@ -234,11 +244,11 @@ function SetBigWigsProfile(layout)
 				["BigWigs_Plugins_Proximity"] = {
 					["profiles"] = {
 						["RobsonUI"] = {
-							["posx"] = 886.58,
+							["posx"] = 256.00,
 							["font"] = "ExpresswayRg",
 							["lock"] = true,
-							["height"] = 99.0000381469727,
-							["posy"] = 88.22,
+							["height"] = 100,
+							["posy"] = 90,
 						},
 					},
 				},
