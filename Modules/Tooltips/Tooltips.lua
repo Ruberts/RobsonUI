@@ -8,7 +8,7 @@ local function CreateAnchor(self)
 	local Anchor = self.Anchor
 	
 	Anchor:ClearAllPoints()
-	Anchor:SetPoint("BOTTOMRIGHT", UIParent, -10, 200)
+	Anchor:SetPoint("BOTTOMRIGHT", UIParent, "RIGHT", -10, -100)
 
 end
 hooksecurefunc(Tooltip, "CreateAnchor", CreateAnchor)

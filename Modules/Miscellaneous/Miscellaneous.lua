@@ -35,6 +35,15 @@ local function Enable(self)
 end
 hooksecurefunc(Ghost, "Enable", Enable)
 
+local function Enable(self)
+	local ObjectiveTracker = self
+	
+	ObjectiveTracker:ClearAllPoints()
+	ObjectiveTracker:SetPoint("TOPLEFT", UIParent, "TOPLEFT", 20, -25)
+
+end
+hooksecurefunc(ObjectiveTracker, "Enable", Enable)
+
 local function CreateAltPowerBar(self)
 	local Panels = T.Panels
 	local AltPowerBarPanel = Panels.AltPowerBarPanel

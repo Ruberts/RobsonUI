@@ -154,7 +154,7 @@ local function RegisterStyle()
 	bars.defaultDB.barStyle = styleName
 end
 f:RegisterEvent("ADDON_LOADED")
-f:RegisterEvent("PLAYER_LOGIN")
+--f:RegisterEvent("PLAYER_LOGIN")
 
 local reason = nil
 f:SetScript("OnEvent", function(self, event, msg)

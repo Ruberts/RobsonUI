@@ -19,7 +19,7 @@ local function Enable(self)
 	BottomLine:Hide()
 	LeftVerticalLine:Hide()
 	RightVerticalLine:Hide()
-	DataTextLeft:Hide()
+	--DataTextLeft:Hide()
 	DataTextRight:Hide()
 	
 	if CubeLeft and CubeRight then
@@ -34,10 +34,15 @@ local function Enable(self)
 		TabsBGRight:Hide()
 	end
 	
-	-- local testPanel = CreateFrame("Frame", nil, UIParent)
+	
+	DataTextLeft:ClearAllPoints()
+	DataTextLeft:SetPoint("TOPLEFT", UIParent, "TOPLEFT", 0, 0)
+	DataTextLeft:StripTextures()
+	
+	-- local testPanel = CreateFrame("Frame", "TestPanel", UIParent)
 	-- testPanel:SkinFrame2px("Transparent")
-	-- testPanel:Size(100, 100)
-	-- testPanel:SetPoint("CENTER", UIParent, "CENTER", 0, 0)
+	-- testPanel:Size(100, 20)
+	-- testPanel:SetPoint("CENTER", UIParent, "CENTER", 0, 100)
 	
 	-- Create RobsonUI panels
 	local ChatBackground = CreateFrame("Frame", "ChatBackground", UIParent)
@@ -74,83 +79,6 @@ local function Enable(self)
 	self.MinimapBackground = MinimapBackground
 	self.AltPowerBarPanel = AltPowerBarPanel
 	
-	-- local DataText1 = CreateFrame("Frame", "DataText1", UIParent)
-	-- DataText1:RobSkin()
-	-- DataText1:Size(120, 16)
-	-- DataText1:SetPoint("TOP", UIParent, "TOP", 0, -5)
-	-- DataText1:CreateShadow()
-	
-	-- --Chat tab tests
-	-- local ChatTab1 = CreateFrame("Frame", "ChatTab1", UIParent)
-	-- ChatTab1:CreateOverlay()
-	-- ChatTab1:CreateBorder(false, true)
-	-- ChatTab1:Size(390, 20)
-	-- ChatTab1:SetPoint("TOPLEFT", UIParent, "LEFT", 10, 0)
-	
-	-- ChatFrame1Tab:RobSkin()
-	-- ChatFrame2Tab:RobSkin()
-	-- ChatFrame3Tab:RobSkin()
-	-- ChatFrame4Tab:RobSkin()
-	-- GeneralDockManager:RobSkin()
-	
-	-- GeneralDockManager:ClearAllPoints()
-	-- GeneralDockManager:SetPoint("LEFT", UIParent, "CENTER", 0, 0)
-	
--- hooksecurefunc("FCF_SetTabPosition", function(chatFrame,x)
-	-- local chatTab = _G[chatFrame:GetName().."Tab"];
-	-- local chatID = chatTab:GetID()
-	-- --chatTab:ClearAllPoints()
-	-- --chatTab:Point("LEFT", ChatTab1, 0, 6)
-	
-	
-	
-	-- if chatID == 2 then
-		-- chatTab:ClearAllPoints()
-		-- chatTab:Point("CENTER", UIParent, "CENTER", 0, 0)
-	-- end
--- end)
-	
-	
-	-- local ChatTab2 = CreateFrame("Frame", "ChatTab2", UIParent)
-	-- ChatTab2:CreateOverlay()
-	-- ChatTab2:CreateBorder(false, true)
-	-- ChatTab2:Size(96, 20)
-	-- ChatTab2:SetPoint("LEFT", ChatTab1, "RIGHT", 1, 0)
-	
-	-- local ChatTab3 = CreateFrame("Frame", "ChatTab3", UIParent)
-	-- ChatTab3:CreateOverlay()
-	-- ChatTab3:CreateBorder(false, true)
-	-- ChatTab3:Size(96, 20)
-	-- ChatTab3:SetPoint("LEFT", ChatTab2, "RIGHT", 1, 0)
-	
-	-- local ChatTab4 = CreateFrame("Frame", "ChatTab4", UIParent)
-	-- ChatTab4:CreateOverlay()
-	-- ChatTab4:CreateBorder(false, true)
-	-- ChatTab4:Size(96, 20)
-	-- ChatTab4:SetPoint("LEFT", ChatTab3, "RIGHT", 1, 0)
-	
-	-- local DPSAddonBackground = CreateFrame("Frame", "DPSAddonBackground", UIParent)
-	-- DPSAddonBackground:RobSkin()
-	-- DPSAddonBackground:Size(195, 128)
-	-- DPSAddonBackground:SetPoint("BOTTOMRIGHT", UIParent, "BOTTOMRIGHT", -10, 10)
-	-- DPSAddonBackground:SetFrameStrata("BACKGROUND")
-	-- DPSAddonBackground:SetFrameLevel(1)
-	-- DPSAddonBackground:SetBackdropColor(0.14, 0.15, 0.15, 0.8)
-	-- --DPSAddonBackg	round:CreateShadow()
-	
-	-- local DamageAddonBackground = CreateFrame("Frame", "DamageAddonBackground", UIParent)
-	-- DamageAddonBackground:RobSkin()
-	-- DamageAddonBackground:Size(195, 128)
-	-- DamageAddonBackground:SetPoint("BOTTOMRIGHT", DPSAddonBackground, "BOTTOMLEFT", 0, 0)
-	-- DamageAddonBackground:SetFrameStrata("BACKGROUND")
-	-- DamageAddonBackground:SetFrameLevel(1)
-	-- DamageAddonBackground:SetBackdropColor(0.14, 0.15, 0.15, 0.8)
-	-- --DamageAddonBackground:CreateShadow()
-	
-	-- local AddonBackground = CreateFrame("Frame", "AddonBackground", UIParent)
-	-- AddonBackground:Size(390, 128)
-	-- AddonBackground:SetPoint("BOTTOMRIGHT", UIParent, "BOTTOMRIGHT", -10, 10)
-	-- AddonBackground:CreateShadow()
-	
+	-- self.TestPanel = TestPanel	
 end
 hooksecurefunc(Panels, "Enable", Enable)
