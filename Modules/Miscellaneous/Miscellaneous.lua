@@ -39,7 +39,7 @@ local function Enable(self)
 	local ObjectiveTracker = self
 	
 	ObjectiveTracker:ClearAllPoints()
-	ObjectiveTracker:SetPoint("TOPLEFT", UIParent, "TOPLEFT", 20, -25)
+	ObjectiveTracker:SetPoint("TOPLEFT", UIParent, "TOPLEFT", 40, -25)
 
 end
 hooksecurefunc(ObjectiveTracker, "Enable", Enable)

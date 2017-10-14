@@ -97,20 +97,21 @@ barmod.ApplySettings = function(self, win)
 
 	local color = win.db.title.color
 	skada.button:SetBackdropColor(0, 0, 0, 0)
-
+	
 	skada:SetBackdrop(nil)
 	if not skada.backdrop then
 		--skada:CreateBackdrop("Default")
-		skada:RobSkin()
-		skada:CreateShadow()
+		--skada:RobSkin()
+		--skada:CreateShadow()
 		-- Try new color for backdrop
-		skada:SetBackdropColor(0.18, 0.18, 0.18, 0.8)
+		--skada:SetBackdropColor(0.18, 0.18, 0.18, 0.8)
 	end
 	
 	skada:SetTexture("Interface\\AddOns\\RobsonUI\\Core\\Textures\\Skullflower.tga")
 	
 	-- Setup the profile
 	win.db.background.height = 125
+	win.db.background.borderthickness = 0
 	win.db.barwidth = 390
 	win.db.barheight = 19
 	win.db.spark = false
@@ -118,8 +119,10 @@ barmod.ApplySettings = function(self, win)
 	win.db.classicons = false
 	win.db.enabletitle = false
 	
+	local DataTextRight = T.Panels.DataTextRight
+	
 	win.bargroup:ClearAllPoints()
-	win.bargroup:SetPoint("BOTTOMRIGHT", UIParent, "BOTTOMRIGHT", -10, 10)
+	win.bargroup:SetPoint("BOTTOMRIGHT", DataTextRight, "TOPRIGHT", 0, 0)
 	
 	Skada.db.profile.showranks = false
 	Skada.db.profile.updatefrequence = 0.1

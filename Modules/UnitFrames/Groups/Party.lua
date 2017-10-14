@@ -11,6 +11,8 @@ local function Party(self)
 	local Debuffs = self.Debuffs
 	local Name = self.Name
 	local Leader = self.Leader
+	local ReadyCheck = self.ReadyCheck
+	local LFDRole = self.LFDRole
 	
 	self:Size(70, 34)
 	
@@ -27,8 +29,15 @@ local function Party(self)
 	Leader:ClearAllPoints()
 	Leader:SetPoint("TOPLEFT", self, "TOPLEFT", 0, 0)
 	
+	ReadyCheck:ClearAllPoints()
+	ReadyCheck:SetPoint("TOPRIGHT", Health, "TOPRIGHT", 0, 0)
+	ReadyCheck:Size(10)
 	
-
+	LFDRole:ClearAllPoints()
+	LFDRole:Size(10)
+	LFDRole:Point("BOTTOMRIGHT", 0, 0)
+	LFDRole:SetParent(Health)
+	LFDRole:SetAlpha(1)
 	
 	self:Tag(Name, "[Tukui:NameShort][Tukui:Role]")
 	--[Tukui:GetNameColor]

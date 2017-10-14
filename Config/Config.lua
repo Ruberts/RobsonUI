@@ -26,12 +26,13 @@ C["Merchant"]["AutoSellGrays"] = false
 
 C["Misc"]["ErrorFilterEnable"] = false
 C["Misc"]["ExperienceEnable"] = true
+C["Misc"]["ThreatBarEnable"] = false
 --C["Misc"]["AltPowerBarEnable"] = false
 
 C["Party"]["Enable"] = false
 C["Party"]["HealthTexture"] = "Skullflower"
 C["Party"]["PowerTexture"] = "Skullflower"
-C["Party"]["Font"] = "Prototype"
+C["Party"]["Font"] = "ExpresswayRg"
 C["Party"]["HealthFont"] = "ExpresswayRg"
 C["Party"]["Portrait"] = false
 C["Party"]["ShowHealthText"] = false

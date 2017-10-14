@@ -192,7 +192,7 @@ function SetBigWigsProfile(layout)
 							["BigWigsEmphasizeAnchor_y"] = 596,
 							["fontSize"] = 12,
 							["BigWigsAnchor_width"] = 362,
-							["BigWigsAnchor_y"] = 90,
+							["BigWigsAnchor_y"] = 100,
 							["BigWigsEmphasizeAnchor_x"] = 590,
 							["barStyle"] = "RobsonUI",
 							["emphasizeGrowup"] = true,

@@ -28,6 +28,7 @@ local function Raid(self)
 	
 	ReadyCheck:ClearAllPoints()
 	ReadyCheck:SetPoint("TOPRIGHT", Health, "TOPRIGHT", 0, 0)
+	ReadyCheck:Size(10)
 	
 	LFDRole:ClearAllPoints()
 	LFDRole:Size(10)

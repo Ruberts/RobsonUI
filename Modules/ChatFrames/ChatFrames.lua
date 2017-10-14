@@ -58,7 +58,8 @@ local function SetDefaultChatFramesPositions()
 		local ID = Frame:GetID()
 		
 		local Width = ChatBackground:GetWidth() - 4
-		local Height = ChatBackground:GetHeight() - 26
+		--local Height = ChatBackground:GetHeight() - 26
+		local Height = ChatBackground:GetHeight() - 49
 
 		-- Set font size and chat frame size
 		Frame:Size(Width, Height)
@@ -66,17 +67,21 @@ local function SetDefaultChatFramesPositions()
 		-- Set default chat frame position
 		if (ID == 1) then
 			Frame:ClearAllPoints()
-			Frame:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 2, 2)
+			--Frame:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 2, 2)
+			Frame:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 2, 25)
 			Frame:RobSkin()
 		elseif (ID == 2) then
 			Frame:ClearAllPoints()
-			Frame:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 2, 2)
+			--Frame:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 2, 2)
+			Frame:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 2, 25)
 		elseif (ID == 3) then
 			Frame:ClearAllPoints()
-			Frame:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 2, 2)
+			--Frame:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 2, 2)
+			Frame:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 2, 25)
 		elseif (ID == 4) then 
 			Frame:ClearAllPoints()
-			Frame:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 2, 2)
+			--Frame:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 2, 2)
+			Frame:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 2, 25)
 		elseif (C.Chat.LootFrame and ID == 4) then
 			if (not Frame.isDocked) then
 				Frame:ClearAllPoints()

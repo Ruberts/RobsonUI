@@ -294,7 +294,7 @@ local function CreateUnits()
 	for i = 1, 5 do
 		if (i == 1) then
 			Boss[i]:ClearAllPoints()
-			Boss[i]:SetPoint("BOTTOMRIGHT", UIParent, "BOTTOMRIGHT", -350, 500)
+			Boss[i]:SetPoint("BOTTOMRIGHT", UIParent, "BOTTOMRIGHT", -350, 800)
 		else
 			Boss[i]:SetPoint("BOTTOM", Boss[i-1], "BOTTOM", 0, -80)             
 		end
